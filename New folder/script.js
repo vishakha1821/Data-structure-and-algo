@@ -1,4 +1,4 @@
-let nums = [2, 4, 3, 6, 5, 7, 13, 56, 34];
+/*let nums = [2, 4, 3, 6, 5, 7, 13, 56, 34];
 
 function binarySearch(array, target){
     let left = 0;
@@ -17,4 +17,23 @@ function binarySearch(array, target){
     return false;
 }
 
-console.log(binarySearch(nums,56));
+console.log(binarySearch(nums,56));*/
+
+//PRE ORDER TREE TRAVERSAL 
+
+var preOrder = function(root){
+    if(!root){
+        return null;
+    }
+
+    const stack = [root];
+    const result = [];
+
+    while(stack.length){
+        let node = stack.pop();
+
+        result.push(node.val);
+        if(node.right) stack.push(node.right);
+        if(node.left) stack.push(node.left);
+    }
+}
